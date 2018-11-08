@@ -1,6 +1,8 @@
 """Definition of ConfigurableTask class"""
-from luigi.task_register import Register, Task
-from tratlets.config import  Configurable, MetaHasDescriptors, MetaHasTraits
+from luigi import Task
+from luigi.task_register import Register
+from traitlets import MetaHasDescriptors, MetaHasTraits
+from traitlets.config import Configurable
 
 
 class MetaConfigurableTask(MetaHasTraits, MetaHasDescriptors, Register):
